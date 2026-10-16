@@ -1,8 +1,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -42,26 +42,24 @@ const Contact = () => {
     setIsSending(true);
 
     try {
-      const response = await fetch(`${API_URL}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: form.name.trim(),
+          email: form.email.trim(),
+          message: form.message.trim(),
+          title: `Portfolio message from ${form.name.trim()}`,
+          time: new Date().toLocaleString(),
         },
-        body: JSON.stringify(form),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || "Unable to send your message.");
-      }
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
       setStatus("success");
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
-      setStatus(
-        error.message || "Something went wrong. Please try again later."
-      );
+      console.error("EmailJS error:", error);
+      setStatus("Unable to send your message. Please try again later.");
     } finally {
       setIsSending(false);
     }
