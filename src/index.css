@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+html{
+  scroll-behavior:smooth;
+}
+
+
+body{
+
+  background:#020706;
+  color:white;
+
+  font-family:
+  "Inter",
+  sans-serif;
+
+  overflow-x:hidden;
+  
+}
+
+
+/* Neon Text */
+
+.neon-text{
+
+background:linear-gradient(
+90deg,
+#00F5D4,
+#00FFA3
+);
+
+background-clip:text;
+-webkit-background-clip:text;
+
+color:transparent;
+-webkit-text-fill-color:transparent;
+
+}
+
+
+
+
+/* Glass Effect */
+
+.glass{
+
+background:
+rgba(255,255,255,0.06);
+
+backdrop-filter:blur(20px);
+
+border:
+1px solid
+rgba(0,245,212,0.25);
+
+box-shadow:
+0 0 15px rgba(0,245,212,0.05);  
+
+}
+
+
+/* Neon Button */
+
+.neon-btn{
+
+background:
+linear-gradient(
+90deg,
+#00F5D4,
+#00FFA3
+);
+
+color:#020706;
+
+box-shadow:
+0 0 25px
+rgba(0,245,212,0.5);
+
+transition:0.3s;
+
+}
+
+.neon-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 35px;
+  padding: 0 15px;
+  white-space: nowrap;
+  margin: 14px 0;
+}
+
+
+.glass{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+
+.neon-btn:hover{
+
+box-shadow:
+0 0 40px
+rgba(0,245,212,0.9);
+
+transform:translateY(-3px);
+
+}
+
+
+
+
+/* Section spacing */
+
+section{
+
+scroll-margin-top:100px;
+
+}
