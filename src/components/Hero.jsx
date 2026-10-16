@@ -17,9 +17,9 @@ import Resume from "../assets/ArpitaTandon(Resume).pdf";
 const Hero = () => {
   // Typewriter Effect
   const roles = [
-    "Data Analyst",
+    "Aspiring Data Analyst",
     "Full Stack Developer",
-    "Data Scientist",
+    "Data Science Enthusiast",
   ];
 
   const [text, setText] = useState("");

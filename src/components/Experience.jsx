@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Experience = () => {
   const experiences = [
     {
-      duration: "Jan 2026 — Present",
+      duration: "Jan 2026 — Jun 2026",
       mode: "Remote",
       role: "Backend Developer Intern, Meta Scifor Technologies",
       points: [
