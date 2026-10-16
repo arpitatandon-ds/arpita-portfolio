@@ -1,4 +1,8 @@
 import { motion } from "framer-motion";
+import AWS_Certificate from '../assets/Certificates/AWS-certificate.jpeg';
+import AWS_badge from "../assets/Certificates/aws-certified-badge.png";
+import PBI_Certificate from "../assets/Certificates/microsoft-certificate.jpeg";
+import PBI_badge from "../assets/Certificates/microsoft-certified-badge.png";
 
 const Certifications = () => {
   const certifications = [
@@ -6,17 +10,17 @@ const Certifications = () => {
       title: "AWS Certified Cloud Practitioner",
       issued: "Oct 2025",
       validThrough: "Oct 2028",
-      credentialUrl: "src/assets/Certificates/AWS-certificate.jpeg",
+      credentialUrl: AWS_Certificate,
       badge: "AWS",
-      badgeImage: "src/assets/Certificates/aws-certified-badge.png",
+      badgeImage: AWS_badge,
     },
     {
       title: "Microsoft Certified: Power BI Data Analyst Associate",
       issued: "Apr 2026",
       validThrough: "Apr 2027",
-      credentialUrl: "src/assets/Certificates/microsoft-certificate.jpeg",
+      credentialUrl: PBI_Certificate,
       badge: "PL",
-      badgeImage: "src/assets/Certificates/microsoft-certified-badge.png",
+      badgeImage: PBI_badge,
     },
   ];
 
